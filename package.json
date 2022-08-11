@@ -1,0 +1,33 @@
+{
+    "name": "get_all_image_instagram",
+    "bin": "main.js",
+    "version": "1.0.0",
+    "description": "get_all_image_instagram",
+    "main": "main.js",
+    "scripts": {
+        "build": "npm run remove && pkg . && npm run copy",
+        "copy": "node copyFile.js",
+        "remove": "node removeBuild.js"
+    },
+    "pkg": {
+        "scripts": "main.js",
+        "assets": [
+            "data.json",
+            "done.json"
+        ],
+        "targets": [
+            "node14-win-x64"
+        ],
+        "outputPath": "build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github-nvhaidev:nvhaidev/get_all_image_instagram.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "pkg": "^5.8.0",
+        "shelljs": "^0.8.5"
+    }
+}
